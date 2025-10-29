@@ -1,0 +1,331 @@
+/* === GLOBAL STYLES === */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #0e0e10;
+  color: #f0f0f0;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+/* === HEADER === */
+header {
+  background: rgba(20, 20, 25, 0.8);
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid #222;
+}
+
+header .logo {
+  font-size: 1.8em;
+  font-weight: 600;
+  color: #00bfff;
+}
+
+header .logo span {
+  color: #ff007f;
+}
+
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #ccc;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+nav a:hover, nav a.active {
+  color: #00bfff;
+  text-shadow: 0 0 10px #00bfff;
+}
+
+/* === SECTIONS === */
+section {
+  padding: 60px 10%;
+  animation: fadeIn 1.2s ease forwards;
+}
+
+section h2 {
+  color: #00bfff;
+  margin-bottom: 20px;
+  font-size: 2em;
+  text-align: center;
+}
+
+/* === BIO PAGE === */
+.profile-pic {
+  width: 180px;
+  border-radius: 50%;
+  display: block;
+  margin: 20px auto;
+  border: 3px solid #00bfff;
+  box-shadow: 0 0 15px #00bfff;
+  transition: transform 0.3s ease;
+}
+
+.profile-pic:hover {
+  transform: scale(1.05);
+}
+
+#bio p {
+  margin: 15px auto;
+  max-width: 800px;
+  font-size: 1.1em;
+  text-align: center;
+}
+
+.highlight {
+  color: #ff007f;
+}
+
+/* === EDUCATION === */
+.edu-card {
+  background: #1a1a1d;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 10px;
+  border-left: 5px solid #00bfff;
+  width: 80%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.edu-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px #00bfff33;
+}
+
+/* === PROJECTS === */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.project-card {
+  background: #1a1a1d;
+  border-radius: 12px;
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.project-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 25px #00bfff44;
+}
+
+.project-card h3 {
+  color: #00bfff;
+  margin-top: 10px;
+}
+
+/* === HOBBIES === */
+.hobbies-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.hobby {
+  background: #56567e;
+  padding: 20px;
+  width: 150px;
+  border-radius: 10px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.hobby i {
+  font-size: 2em;
+  color: #ff007f;
+  margin-bottom: 10px;
+}
+
+.hobby:hover {
+  background: #252528;
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px #ff007f44;
+}
+
+/* === CONTACT === */
+#contact p {
+  text-align: center;
+  margin: 10px 0;
+  font-size: 1.1em;
+}
+
+#contact i {
+  color: #00bfff;
+  margin-right: 10px;
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.socials a {
+  margin: 0 10px;
+  font-size: 1.8em;
+  color: #ccc;
+  transition: all 0.3s ease;
+}
+
+.socials a:hover {
+  color: #00bfff;
+  transform: scale(1.2);
+  text-shadow: 0 0 15px #00bfff;
+}
+
+/* === FOOTER === */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #111;
+  border-top: 1px solid #222;
+  color: #888;
+  font-size: 0.9em;
+}
+
+/* === ANIMATIONS === */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .edu-card, #bio p {
+    width: 100%;
+  }
+}
+/* === INFO BOX (About Page) === */
+.info-box {
+  background: #1a1a1d;
+  border-left: 4px solid #00bfff;
+  margin: 40px auto;
+  padding: 20px 30px;
+  border-radius: 10px;
+  max-width: 600px;
+  box-shadow: 0 0 20px #00bfff33;
+}
+
+.info-box h3 {
+  color: #00bfff;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.info-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.info-box li {
+  margin: 10px 0;
+  font-size: 1.05em;
+  color: #ddd;
+}
+
+.info-box i {
+  color: #ff007f;
+  margin-right: 8px;
+}
+.hobbies-section {
+  text-align: center;
+  padding: 40px 20px;
+  color: #fff;
+}
+
+.hobby-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.hobby-item {
+  background-color: #1a1a1a;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.hobby-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+}
+
+.hobby-item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.hobby-item h3 {
+  margin: 15px 0 10px;
+  font-size: 1.3em;
+  color: #00aaff;
+}
+
+.hobby-item p {
+  padding: 0 15px 20px;
+  font-size: 0.95em;
+  color: #ddd;
+}
+
+
+
+.socials {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.socials a {
+  color: #00aaff;
+  font-size: 1.8em;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.socials a:hover {
+  color: #ff4081;
+  transform: scale(1.2);
+}
+
